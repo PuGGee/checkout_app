@@ -1,0 +1,25 @@
+.component.text_input {
+
+  border-width: 2px;
+
+  border-style: solid;
+
+  border-color: gray;
+
+  border-radius: 10px;
+
+  width: 10em;
+
+  padding: 0.5em;
+
+  &:focus {
+    border-color: #0F0000;
+  }
+
+  input {
+    outline: none;
+
+    width: 100%;
+    border: none;
+  }
+}

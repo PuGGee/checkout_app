@@ -11,5 +11,9 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
-//= require_tree .
+//= require mithril/mithril
+//= require_tree ./components
+
+//= require checkout
+
+var App = {}
