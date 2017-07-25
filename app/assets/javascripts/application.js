@@ -12,6 +12,8 @@
 //
 //= require rails-ujs
 //= require mithril/mithril
+//= require polyfills
+//= require serialize
 //= require_tree ./components
 
 //= require checkout

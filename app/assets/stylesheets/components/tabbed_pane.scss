@@ -1,0 +1,49 @@
+.component.tabbed_pane {
+  white-space: nowrap;
+
+  position: relative;
+
+  .slider_container {
+    margin-top: -1px;
+    border-style: solid;
+    border-color: $light_grey;
+    border-width: 1px;
+    overflow: hidden;
+  }
+
+  .slider {
+    position: relative;
+    transition: left 1s;
+  }
+
+  .tab_container {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .tab_button {
+    display: inline-block;
+    cursor: pointer;
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    border-color: $light-grey;
+    border-style: solid;
+    border-width: 1px;
+
+    position: relative;
+    margin-right: -1px;
+
+    &:hover {
+      background-color: $light-grey;
+    }
+
+    .tab_button_text {
+      text-align: center;
+    }
+  }
+}

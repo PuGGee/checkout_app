@@ -1,6 +1,12 @@
+$grey: #333;
+$light-grey: #CCC;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 @import "checkout";
+@import "checkout";
 
-@import "components/text_input"
+@import "components/text_input";
+@import "components/tabbed_pane";
+@import "components/tab";

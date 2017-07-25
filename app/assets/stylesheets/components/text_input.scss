@@ -1,29 +1,23 @@
 .component.text_input {
 
-  // background-color: #e7a61a;
-  color: #c7c7c7;
+  color: $grey;
   font-family: Courier New;
   width: 15em;
 
-  // box-shadow: 3px 3px 20px 0px rgba(0,0,0,0.75);
-
-  // // box-shadow: inset 4px 4px 27px 0px rgba(0,0,0,0.75);
-
   &.active {
     .inset {
-      box-shadow: inset 15em 0px 0px 0px #c1c1c1;
+
     }
   }
 
   .inset {
-    background-color: #e8e8e8;
-    padding: 0.5em;
+    background-color: #FEFEFE;
+    padding: 0.1em;
 
     border-radius: 0.2em;
-
-    transition: box-shadow 0.4s ease-in-out;
-
-    box-shadow: inset 0px 0px 0px 0px #e8e8e8;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $light-grey;
   }
 
   input {
@@ -31,7 +25,14 @@
 
     width: 100%;
     border: none;
-    background-color: #FEFEFE;
-    padding-left: 0.3em;
+    background-color: transparent;
+    padding-left: 0.4em;
+    padding-top: 0.2em;
+  }
+
+  label {
+    color: $light-grey;
+    font-weight: normal;
+    font-style: italic;
   }
 }

@@ -12,7 +12,8 @@
 
   border-width: 1px;
   border-style: solid;
-  border-color: #d0d0d0;
+  border-color: $light-grey;
+  border-radius: 0.3em;
 }
 
 body {
@@ -21,4 +22,8 @@ body {
 
 .component {
   margin-bottom: 1em;
+
+  &.tabbed_pane {
+    width: 20em;
+  }
 }
