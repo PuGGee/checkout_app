@@ -8,7 +8,8 @@ var TextInput = {
       m('div', {class: 'inset'}, [
         m('input', {
                      onfocus: this.on_focus.bind(this, vnode),
-                     onfocusout: this.on_focus_out.bind(this, vnode)
+                     onfocusout: this.on_focus_out.bind(this, vnode),
+                     value: vnode.attrs.placeholder
                    })
       ])
     ]);
