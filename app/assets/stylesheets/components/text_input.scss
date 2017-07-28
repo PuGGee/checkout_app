@@ -1,7 +1,5 @@
 .component.text_input {
 
-  color: $grey;
-  font-family: Courier New;
   width: 15em;
 
   &.active {
@@ -34,5 +32,6 @@
     color: $light-grey;
     font-weight: normal;
     font-style: italic;
+    font-family: Courier New;
   }
 }
