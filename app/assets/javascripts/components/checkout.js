@@ -1,19 +1,26 @@
 var Checkout = {
   view: function(vnode) {
     return [
-      window.derp = m(TabbedPane, {tabs: {
-        tab1: m('div', {class: 'tab1'}, [
-          m(TextInput, {label: 'Address', placeholder: '52 Plough Way', name: 'address[line1]'}),
-          m(TextInput, {label: 'City', placeholder: 'London'}),
-          m(TextInput, {label: 'Postcode', placeholder: 'SE16 2LT'})
-        ]),
+      m('div', {class: 'checkout_form'}, [
 
-        tab2: m('div', {class: 'tab2'}, [
-          m(TextInput, {label: 'Label1', placeholder: '52 Plough Way'}),
-          m(TextInput, {label: 'Label2', placeholder: 'London'}),
-          m(TextInput, {label: 'Label3', placeholder: 'SE16 2LT'})
-        ])
-      }})
+        m(TextInput, {label: 'Email Address', name: 'customer[email]'}),
+
+        m(TabbedPane, {tabs: {
+          'Delivery': m('div', {class: 'delivery'}, [
+            m(TextInput, {label: 'First Name', name: 'customer[first_name]'}),
+            m(TextInput, {label: 'Last Name', name: 'customer[last_name]'}),
+            m(TextInput, {label: 'Mobile Number', name: 'customer[mobile]'}),
+            m(TextInput, {label: 'Delivery Address', name: 'delivery_address'})
+          ]),
+
+          'Click & Collect': m('div', {class: 'click_collect'}, [
+            m(TextInput, {label: 'First Name', name: 'customer[first_name]'}),
+            m(TextInput, {label: 'Last Name', name: 'customer[last_name]'}),
+            m(TextInput, {label: 'Mobile Number', name: 'customer[mobile]'}),
+            m(TextInput, {label: 'Postcode', name: 'postcode'})
+          ])
+        }})
+      ])
     ];
   }
 }

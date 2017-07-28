@@ -19,15 +19,12 @@ var TextInput = {
         vnode.state.input = m('input', {
                      onfocus: this.on_focus.bind(this, vnode),
                      onfocusout: this.on_focus_out.bind(this, vnode),
+                     onchange: this.on_change.bind(this, vnode),
                      placeholder: vnode.attrs.placeholder,
                      name: vnode.attrs.name
                    })
       ])
     ]);
-  },
-
-  onremove: function(vnode) {
-    TextInput._stored_values[vnode.attrs.name] = vnode.state.input.dom.value;
   },
 
   on_focus: function(vnode) {
@@ -36,5 +33,9 @@ var TextInput = {
 
   on_focus_out: function(vnode) {
     vnode.state.focused = false;
+  },
+
+  on_change: function(vnode) {
+    TextInput._stored_values[vnode.attrs.name] = vnode.state.input.dom.value;
   }
 }
